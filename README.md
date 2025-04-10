@@ -17,4 +17,4 @@ It is recommended to use `OptionalHack`, rather than `RequiredHack`, as this is 
 
 ## Proof of Concept
 
-This was made a proof of concept that it's possible to restore the event. Ideally this will be included in a future mod launcher update and this version will become redundant.
+This was made as a proof of concept that it's possible to restore the event. Ideally this will be included in a future mod launcher update and thus become redundant.
