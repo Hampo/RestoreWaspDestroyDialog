@@ -14,3 +14,7 @@ If you're an end user, you can find the hack in the `Settings` tab of your mod l
 
 If you're a mod developer, you can add this as a hack in your `Meta.ini`, under the `[Miscellaneous]` header.
 It is recommended to use `OptionalHack`, rather than `RequiredHack`, as this is not an official Lucas hack.
+
+## Proof of Concept
+
+This was made a proof of concept that it's possible to restore the event. Ideally this will be included in a future mod launcher update and this version will become redundant.
