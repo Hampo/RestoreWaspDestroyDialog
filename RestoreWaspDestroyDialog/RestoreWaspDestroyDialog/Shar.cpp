@@ -43,3 +43,21 @@ void TriggerEvent(void* pEventManager, unsigned int uiEvent, void* pParam)
 		call pFunc
 	}
 }
+
+int64_t radMakeKey(const char* pToken, int64_t keyValue)
+{
+	if (pToken != NULL)
+	{
+		while (*pToken)
+		{
+			keyValue *= 65599;
+			keyValue = (keyValue ^ (static_cast<int64_t>(*pToken)));
+
+			pToken++;
+		}
+
+		return(keyValue);
+	}
+
+	return keyValue;
+}
