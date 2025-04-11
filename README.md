@@ -18,3 +18,10 @@ It is recommended to use `OptionalHack`, rather than `RequiredHack`, as this is 
 ## Proof of Concept
 
 This was made as a proof of concept that it's possible to restore the event. Ideally this will be included in a future mod launcher update and thus become redundant.
+
+
+## Special thanks
+
+- [@EnAppelsin](https://github.com/EnAppelsin) for all their assistance with making custom hacks.
+- Hamster for all their testing during development.
+- [@Lucas Cardellini](https://github.com/lucasc190) for developing the mod launcher in the first place.
