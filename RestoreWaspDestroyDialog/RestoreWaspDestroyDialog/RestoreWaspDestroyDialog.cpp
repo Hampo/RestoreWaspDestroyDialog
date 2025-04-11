@@ -52,10 +52,10 @@ extern "C" unsigned int __cdecl HackEntryPoint(HackEvent event, void* data)
 			debug_printf(L"RestoreWaspDestroyDialog: Shar Version %d\n", sharVersion);
 
 			beecamera = radMakeKey("beecamera");
+			debug_printf(L"RestoreWaspDestroyDialog: Beecamera: %jd\n", beecamera);
 
-			int triggerMode = Hack_GetSetting(L"RestoreWaspDestroyDialog", L"TriggerMode");
-			uint32_t triggerModeValue = *((uint32_t*)((uint8_t*)triggerMode+392));
-			debug_printf(L"RestoreWaspDestroyDialog: TriggerMode: %d\n", triggerModeValue);
+			int triggerMode = Hack_GetSettingI(L"RestoreWaspDestroyDialog", L"TriggerMode");
+			debug_printf(L"RestoreWaspDestroyDialog: TriggerMode: %d\n", triggerMode);
 
 			auto initializeStatus = MH_Initialize();
 			if (initializeStatus != MH_OK)
@@ -64,7 +64,7 @@ extern "C" unsigned int __cdecl HackEntryPoint(HackEvent event, void* data)
 				return 1;
 			}
 
-			if (triggerModeValue == 0)
+			if (triggerMode == 0)
 			{
 				void* flyingActorReceiveEvent = GetFlyingActorReceiveEvent_Ptr();
 				FakeFlyingActor::originalReceiveEvent = 0;
@@ -125,6 +125,7 @@ void __thiscall FakeFlyingActor::ReceiveEvent(int callback, void* stateProp)
 		uint32_t newState = *((uint32_t*)((uint8_t*)stateProp + 32)); //CStateProp.m_CurrentState
 		if (name == beecamera && newState == ACTOR_DESTROYED)
 		{
+			debug_printf(L"RestoreWaspDestroyDialog: Received STATEPROP_CHANGE_STATE_EVENT. Name: %jd. New State: %d. Triggered dialog\n", name, newState);
 			TriggerEvent(GetEventManager(), EVENT_BREAK_CAMERA_OR_BOX);
 		}
 	}
@@ -137,6 +138,7 @@ void __thiscall FakeActorDSG::ReceiveEvent(int callback, void* stateProp)
 	int64_t name = *((int64_t*)((uint8_t*)stateProp + 8)); //CStateProp.name
 	if (name == beecamera && callback == REMOVE_FROM_WORLD)
 	{
+		debug_printf(L"RestoreWaspDestroyDialog: Received REMOVE_FROM_WORLD. Name: %jd. Triggered dialog\n", name);
 		TriggerEvent(GetEventManager(), EVENT_BREAK_CAMERA_OR_BOX);
 	}
 

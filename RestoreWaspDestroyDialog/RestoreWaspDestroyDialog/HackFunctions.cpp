@@ -20,3 +20,10 @@ int Hack_GameRelease()
 {
 	return *Hack_GameReleasePtr;
 }
+
+int Hack_GetSettingI(wchar_t const* hackName, wchar_t const* settingName)
+{
+	void* setting = Hack_GetSetting(hackName, settingName);
+	int* valuePtr = (int*)((char*)setting + 0x188);
+	return *valuePtr;
+}

@@ -93,8 +93,10 @@ void InitialiseHack();
 typedef void (*Hack_Printf_t)(int type, int category, const wchar_t* msg, ...);
 extern Hack_Printf_t Hack_Printf;
 
-typedef int (*Hack_GetSetting_t)(wchar_t const* hackName, wchar_t const* settingName);
+typedef void* (*Hack_GetSetting_t)(wchar_t const* hackName, wchar_t const* settingName);
 extern Hack_GetSetting_t Hack_GetSetting;
 
 // Get the game release
 int Hack_GameRelease();
+
+int Hack_GetSettingI(wchar_t const* hackName, wchar_t const* settingName);
