@@ -1,6 +1,7 @@
 #include "pch.h"
 
 #include "HackFunctions.h"
+#include "Win32.h"
 #include "MinHook.h"
 #include "Shar.h"
 #include <stdlib.h>
@@ -54,7 +55,8 @@ extern "C" unsigned int __cdecl HackEntryPoint(HackEvent event, void* data)
 			beecamera = radMakeKey("beecamera");
 			debug_printf(L"RestoreWaspDestroyDialog: Beecamera: %jd\n", beecamera);
 
-			int triggerMode = Hack_GetSettingI(L"RestoreWaspDestroyDialog", L"TriggerMode");
+			//int triggerMode = Hack_GetSettingI(L"RestoreWaspDestroyDialog", L"TriggerMode");
+			int triggerMode = ReadRegistryDWORD(HKEY_CURRENT_USER, L"SOFTWARE\\Lucas Stuff\\Lucas' Simpsons Hit & Run Tools\\Lucas' Simpsons Hit & Run Mod Launcher\\Mod Settings\\RestoreWaspDestroyDialog", L"TriggerMode", 0);
 			debug_printf(L"RestoreWaspDestroyDialog: TriggerMode: %d\n", triggerMode);
 
 			auto initializeStatus = MH_Initialize();

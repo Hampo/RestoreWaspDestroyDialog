@@ -170,6 +170,7 @@
     <ClInclude Include="resource.h" />
     <ClInclude Include="resource1.h" />
     <ClInclude Include="Shar.h" />
+    <ClInclude Include="Win32.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />
@@ -182,6 +183,7 @@
     </ClCompile>
     <ClCompile Include="Shar.cpp" />
     <ClCompile Include="RestoreWaspDestroyDialog.cpp" />
+    <ClCompile Include="Win32.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="RestoreWaspDestroyDialog.rc" />
