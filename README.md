@@ -23,5 +23,5 @@ This was made as a proof of concept that it's possible to restore the event. Ide
 ## Special thanks
 
 - [@EnAppelsin](https://github.com/EnAppelsin) for all their assistance with making custom hacks.
-- [@AnnoyingHamster](https://github.com/AnnoyingHamster) for all their testing during development.
+- [@Hamster](https://github.com/AnnoyingHamster) for all their testing during development.
 - [@Lucas Cardellini](https://github.com/lucasc190) for developing the mod launcher in the first place.
