@@ -24,7 +24,7 @@ void* GetFlyingActorReceiveEvent_Ptr()
 
 void* GetActorDSGReceiveEvent_Ptr()
 {
-	return Choose(0x415400, 0x415680, 0x415290, 0x415AD0);
+	return Choose(0x415400, 0x415420, 0x4153B0, 0x415450);
 }
 
 void* GetEventManager()
