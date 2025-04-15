@@ -113,6 +113,8 @@ extern "C" unsigned int __cdecl HackEntryPoint(HackEvent event, void* data)
 				debug_printf(L"RestoreWaspDestroyDialog: Hooked ActorDSG::ReceiveEvent %p to %p\n", FakeActorDSG::originalReceiveEvent, *newActorDSGReceiveEvent_ptr);
 			}
 
+			printf(L"RestoreWaspDestroyDialog: Initialised successfully.\n");
+
 			break;
 		}
 	}
