@@ -19,7 +19,7 @@ int IdentifySharVersion()
 
 void* GetFlyingActorReceiveEvent_Ptr()
 {
-	return Choose(0x41A5C0, 0x41A840, 0x41A450, 0x41AC90);
+	return Choose(0x41A5C0, 0x41A4D0, 0x41A5F0, 0x41A8E0);
 }
 
 void* GetActorDSGReceiveEvent_Ptr()
