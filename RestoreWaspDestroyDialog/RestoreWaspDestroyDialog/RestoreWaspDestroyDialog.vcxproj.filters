@@ -64,6 +64,5 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="meta.ini" />
-    <None Include="packages.config" />
   </ItemGroup>
 </Project>

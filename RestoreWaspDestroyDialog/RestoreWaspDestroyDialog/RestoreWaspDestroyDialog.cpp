@@ -3,6 +3,7 @@
 #include "HackFunctions.h"
 #include "Win32.h"
 #include "MinHook.h"
+#pragma comment(lib, "libMinHook.x86.lib")
 #include "Shar.h"
 #include <stdlib.h>
 #include <cstdint>
