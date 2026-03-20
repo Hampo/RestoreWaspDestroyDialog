@@ -1,4 +1,4 @@
-#Archived
+# Archived
 This is now part of [Lucas' Simpsons Hit & Run Mod Launcher](https://modbakery.donutteam.com/releases/view/6) v1.27.
 
 # RestoreWaspDestroyDialog
